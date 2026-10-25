@@ -10958,6 +10958,60 @@ header.masthead h1, header.masthead .h1 {
   }
 }
 
+.quickstart-card {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid rgba(11, 61, 71, 0.08);
+  border-radius: 1rem;
+  box-shadow: 0 1.25rem 2.5rem rgba(11, 61, 71, 0.1);
+}
+
+.quickstart-step {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .quickstart-step::before {
+    content: "";
+    position: absolute;
+    top: 1.75rem;
+    left: 0;
+    width: 100%;
+    border-top: 2px dashed rgba(31, 122, 140, 0.25);
+    z-index: 0;
+  }
+  .quickstart-step:first-child::before {
+    left: 50%;
+    width: 50%;
+  }
+  .quickstart-step:last-child::before {
+    left: 0;
+    width: 50%;
+  }
+}
+.quickstart-step-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.quickstart-step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: rgba(31, 122, 140, 0.12);
+  color: #1f7a8c;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.quickstart-step-icon {
+  color: #1f7a8c;
+}
+
 #portfolio .container-fluid, #portfolio .container-sm, #portfolio .container-md, #portfolio .container-lg, #portfolio .container-xl, #portfolio .container-xxl {
   max-width: 1920px;
 }
